@@ -6,7 +6,7 @@ class Preferencias_BLL():
         return
     
     def ListboxWhile():
-        with open('C:\Curso Programar\python\preferencias.txt') as arquivo:
+        with open('.\Preferencias.txt') as arquivo:
             lista = []
             preferencia = arquivo.readline()
             while preferencia != '':
@@ -16,13 +16,13 @@ class Preferencias_BLL():
         return lista
     
     def ListboxForComIndice():
-        with open('C:\Curso Programar\python\preferencias.txt') as arquivo:
+        with open('.\Preferencias.txt') as arquivo:
             preferencias = arquivo.readlines()
         arquivo.close()
         return preferencias
         
     def ListboxForSemIndice():
-        with open('C:\Curso Programar\python\preferencias.txt') as arquivo:
+        with open('.\Preferencias.txt') as arquivo:
             preferencias = arquivo.readlines()
         arquivo.close()
         return preferencias
@@ -30,7 +30,7 @@ class Preferencias_BLL():
     def ImportarBDConectado():
         connectionString = (
             r'DRIVER={Microsoft Access Driver (*.mdb, *.accdb)};'
-            r'DBQ=C:\Curso Programar\python\ExercicioAccess_20231012.accdb;'
+            r'DBQ=.\ExercicioAccess_20231012.accdb;'
         )
         objConexao = pyodbc.connect(connectionString)
         objLeitorBD = objConexao.cursor()
@@ -52,7 +52,7 @@ class Preferencias_BLL():
     def ImportarBDDesconectado():
         connectionString = (
             r'DRIVER={Microsoft Access Driver (*.mdb, *.accdb)};'
-            r'DBQ=C:\Curso Programar\python\ExercicioAccess_20231012.accdb;'
+            r'DBQ=.\ExercicioAccess_20231012.accdb;'
         )
         objConexao = pyodbc.connect(connectionString)
         objLeitorBD = objConexao.cursor()
@@ -73,7 +73,7 @@ class Preferencias_BLL():
         if dadoAdicionar != None or "":
             connectionString = (
                 r'DRIVER={Microsoft Access Driver (*.mdb, *.accdb)};'
-                r'DBQ=C:\Curso Programar\python\ExercicioAccess_20231012.accdb;'
+                r'DBQ=.\ExercicioAccess_20231012.accdb;'
             )
             objConexao = pyodbc.connect(connectionString)
             objLeitorBD = objConexao.cursor()
@@ -89,7 +89,7 @@ class Preferencias_BLL():
     def EditarEntradaBD(dadoEditar, dadoValorNovo):
         connectionString = (
             r'DRIVER={Microsoft Access Driver (*.mdb, *.accdb)};'
-            r'DBQ=C:\Curso Programar\python\ExercicioAccess_20231012.accdb;'
+            r'DBQ=.\ExercicioAccess_20231012.accdb;'
         )
         objConexao = pyodbc.connect(connectionString)
         objLeitorBD = objConexao.cursor()
@@ -103,7 +103,7 @@ class Preferencias_BLL():
     def RemoverEntradaBD(dadoRemover):
         connectionString = (
             r'DRIVER={Microsoft Access Driver (*.mdb, *.accdb)};'
-            r'DBQ=C:\Curso Programar\python\ExercicioAccess_20231012.accdb;'
+            r'DBQ=.\ExercicioAccess_20231012.accdb;'
         )
         objConexao = pyodbc.connect(connectionString)
         objLeitorBD = objConexao.cursor()
