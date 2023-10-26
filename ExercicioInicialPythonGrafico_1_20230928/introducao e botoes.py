@@ -76,6 +76,7 @@ def Mensagem():
     messagebox.showinfo('Mensagem', 'Parabéns, meu primeiro programa gráfico!')
 
 
+# RODA AÍ
 #Definindo o botão, com algumas configurações iniciais
 BtnMensagem = Button(FrmMensagem, text="Clique aqui para mensagem!", fg='blue', bg='yellow', width=25, height=1,
                      command=Mensagem)
@@ -132,3 +133,6 @@ O exemplo a seguir cria uma janela com um botão, rótulo e campo de entrada.
 # objJanela.title('Curso ProgrAmar Python')
 # objJanela.geometry("300x200+10+10")
 # objJanela.mainloop()
+
+
+# Parte do Código mexida por mim, Roberto
